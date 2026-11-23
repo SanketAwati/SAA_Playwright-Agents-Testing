@@ -1,0 +1,24 @@
+{
+  "name": "playwright-agents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node Utilities/cleanAllureResults.js && playwright test",
+    "test:cart": "npm test -- Test/cart-checkout",
+    "test:chromium": "npm test -- --project=chromium",
+    "report": "playwright show-report Report/html",
+    "allure:generate": "node node_modules/allure/cli.js generate Report/allure-results --clean --output Report/allure-report",
+    "allure:open": "node node_modules/allure/cli.js open Report/allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "allure": "^3.33.0",
+    "allure-playwright": "^3.15.0"
+  }
+}
